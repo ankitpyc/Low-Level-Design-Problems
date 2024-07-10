@@ -1,4 +1,4 @@
-package org.example.domain;
+package org.lld.elevator.domain;
 
 import lombok.AllArgsConstructor;
 import lombok.Builder;

@@ -1,13 +1,13 @@
-package org.example;
-
-import org.example.domain.Elevator;
-import org.example.domain.Floor;
-import org.example.domain.Person;
-import org.example.observer.ElevatorEvent;
-import org.example.observer.ElevatorObserver;
+package org.lld.elevator;
 
 import java.util.ArrayList;
 import java.util.List;
+
+import org.lld.elevator.domain.Elevator;
+import org.lld.elevator.domain.Floor;
+import org.lld.elevator.domain.Person;
+import org.lld.elevator.observer.ElevatorEvent;
+import org.lld.elevator.observer.ElevatorObserver;
 
 public class ElevatorCNS implements ElevatorObserver,ElevatorSystemInf {
     private List<Elevator> elevators;

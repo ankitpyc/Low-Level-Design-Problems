@@ -1,4 +1,4 @@
-package org.example;
+package org.lld.elevator;
 
 public class ElevatorService {
 }

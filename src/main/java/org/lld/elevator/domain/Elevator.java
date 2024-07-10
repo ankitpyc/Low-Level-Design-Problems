@@ -1,14 +1,15 @@
-package org.example.domain;
+package org.lld.elevator.domain;
 
 import lombok.AllArgsConstructor;
 import lombok.Builder;
 import lombok.Getter;
 import lombok.Setter;
-import org.example.observer.ElevatorEvent;
-import org.example.observer.ElevatorObserver;
-import org.example.observer.EventPublisher;
 
 import java.util.*;
+
+import org.lld.elevator.observer.ElevatorEvent;
+import org.lld.elevator.observer.ElevatorObserver;
+import org.lld.elevator.observer.EventPublisher;
 
 @Builder
 @AllArgsConstructor

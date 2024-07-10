@@ -1,4 +1,4 @@
-package org.example.error;
+package org.lld.elevator.error;
 
 public class ElevatorError {
 }
