@@ -13,4 +13,10 @@ func main() {
 		InstructorId: "Joshe Portilla",
 	}
 
+	student1 = &domain.Student{
+		Name:     "Ankit",
+		Password: "909jjmk",
+		Email:    "anki@g.com",
+	}
+
 }
