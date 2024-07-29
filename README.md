@@ -1,5 +1,9 @@
 # Low Level Design
 
+![1708761790080](https://github.com/user-attachments/assets/c53dc4c6-08b7-48ac-9900-511943333ed2)
+
+
+
 ## Easy
 
 - Design Parking Lot
