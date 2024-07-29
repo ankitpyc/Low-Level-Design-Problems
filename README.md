@@ -1,1 +1,11 @@
 # Low Level Design
+
+## Easy
+
+- Design Parking Lot
+- Design a Vending Machine
+- Design Stack Overflow
+- Design Logging Framework
+- Design Coffee Vending Machine
+- Design Traffic Signal Control System
+- Design a Task Management System
