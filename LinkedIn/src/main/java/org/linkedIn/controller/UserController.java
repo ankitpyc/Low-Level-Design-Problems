@@ -1,2 +1,10 @@
-package org.linkedIn.controller;public class UserController {
+package org.linkedIn.controller;
+
+
+
+public class UserController {
+
+
+
+
 }
