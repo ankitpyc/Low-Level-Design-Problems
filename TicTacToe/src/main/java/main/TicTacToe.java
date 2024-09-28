@@ -18,7 +18,6 @@ public class TicTacToe {
         playerList.add(player2);
         game.addPlayers(playerList);
         game.startGame();
-
     }
 
 }

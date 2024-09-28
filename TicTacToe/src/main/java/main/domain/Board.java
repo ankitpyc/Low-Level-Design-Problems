@@ -8,9 +8,7 @@ import java.util.Random;
 public class Board implements BoardPublisher {
 
     public PlayerMove[][] board;
-    Random randomMoves;
-    int[] ColumnSum;
-    int[] RowSum;
+    int[] ColumnSum, RowSum;
     int totalMoves;
     List<BoardObserver> boardObservers;
 
@@ -23,18 +21,13 @@ public class Board implements BoardPublisher {
         }
         ColumnSum = new int[3];
         RowSum = new int[3];
-        for (int i = 0; i < 3; i++) {
-            ColumnSum[i] = (0);
-            RowSum[i] = (0);
-        }
         boardObservers = new ArrayList<>();
-        randomMoves = new Random();
     }
 
-    public void move(Player player) {
-        int x = (int) (Math.random() * (3));
-        int y = (int) (Math.random() * (3));
-        System.out.println("moves as " + x + ", " + y);
+    public void move(Player player, Position pos) {
+        int x = pos.getX();
+        int y = pos.getY();
+        System.out.println("moves as " + pos.getX() + ", " + pos.getY());
         while (board[x][y] == PlayerMove.X || board[x][y] == PlayerMove.O) {
             x = (int) (Math.random() * (3));
             y = (int) (Math.random() * (3));
@@ -100,10 +93,15 @@ public class Board implements BoardPublisher {
         return false;
     }
 
+    public boolean isValidMove(int x, int y) {
+        if(x <0 || x>=3 || y < 0 || y>=3)
+            return false;
+        return board[x][y] == PlayerMove.E;
+    }
+
     @Override
     public void notifyOnStatusChange(BoardStatus boardStatus) {
         for (BoardObserver observer : boardObservers) {
-
             observer.observe(boardStatus);
         }
     }
