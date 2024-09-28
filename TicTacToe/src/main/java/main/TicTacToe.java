@@ -6,7 +6,6 @@ import main.domain.Player;
 import java.util.ArrayList;
 import java.util.List;
 
-import static sun.audio.AudioPlayer.player;
 
 public class TicTacToe {
     public static void main(String[] args) {
