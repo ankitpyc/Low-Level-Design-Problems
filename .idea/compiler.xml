@@ -6,6 +6,7 @@
       <directory url="file://$PROJECT_DIR$/TicTacToe/src/main/resources/archetype-resources" includeSubdirectories="true" />
       <directory url="file://$PROJECT_DIR$/HotelManagementSystem/src/main/resources/archetype-resources" includeSubdirectories="true" />
       <directory url="file://$PROJECT_DIR$/SnakeLadder/src/main/resources/archetype-resources" includeSubdirectories="true" />
+      <directory url="file://$PROJECT_DIR$/ATMMachine/src/main/resources/archetype-resources" includeSubdirectories="true" />
     </excludeFromCompile>
     <annotationProcessing>
       <profile name="Maven default annotation processors profile" enabled="true">
@@ -15,6 +16,7 @@
         <module name="CricInfo" />
         <module name="LinkedIn" />
         <module name="SnakeLadder" />
+        <module name="ATMMachine" />
         <module name="HotelManagementSystem" />
         <module name="TicTacToe" />
       </profile>

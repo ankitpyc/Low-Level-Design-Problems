@@ -12,6 +12,7 @@
         <module>LinkedIn</module>
         <module>HotelManagementSystem</module>
         <module>SnakeLadder</module>
+        <module>ATMMachine</module>
     </modules>
     <dependencies>
         <dependency>

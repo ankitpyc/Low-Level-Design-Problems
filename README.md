@@ -19,7 +19,7 @@
 - Design Pub Sub System
 - Design Tic Tac Toe Game
 - Design Car Rental System
-- Design an ATM
+- Design an ATMMachine
 - Design Hotel Management System
 - Design LinkedIn
 - Design a Social Network like Facebook
