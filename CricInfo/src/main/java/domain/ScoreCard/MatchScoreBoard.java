@@ -2,7 +2,6 @@ package domain.ScoreCard;
 
 import domain.Ball;
 import domain.Observer.MatchObserver;
-import domain.Observer.MatchSubscriber;
 import domain.Player;
 import domain.Team;
 
@@ -12,57 +11,145 @@ import java.util.List;
 import java.util.Map;
 
 public class MatchScoreBoard implements MatchObserver {
-    Team firstBattingTeam;
-    Team firstBowlingTeam;
-    Map<Team, List<Map<Player,ScoreCardEntry>>> matchScoreCard;
+    int InningsNo;
+    int totalOverToBePlayed;
+    Team battingTeam;
+    Player onStrikePlayer;
+    Player nonStrikePlayer;
+    Player bowlingPlayer;
+    Team bowlingTeam;
+    Map<Team, ScoreBoard> matchScoreCard;
 
     public MatchScoreBoard(Team firstBattingTeam, Team firstBowlingTeam, Map<Team, List<ScoreCard>> matchScoreCard) {
-        this.firstBattingTeam = firstBattingTeam;
-        this.firstBowlingTeam = firstBowlingTeam;
+        this.battingTeam = firstBattingTeam;
+        this.bowlingTeam = firstBowlingTeam;
+        this.totalOverToBePlayed = 50;
+        this.InningsNo = 1;
         initializeScoreCard();
     }
 
     public Team getFirstBattingTeam() {
-        return firstBattingTeam;
+        return battingTeam;
     }
 
     public void setFirstBattingTeam(Team firstBattingTeam) {
-        this.firstBattingTeam = firstBattingTeam;
+        this.battingTeam = firstBattingTeam;
     }
 
-    public Team getFirstBowlingTeam() {
-        return firstBowlingTeam;
+    public Team getBowlingTeam() {
+        return bowlingTeam;
     }
 
-    public void setFirstBowlingTeam(Team firstBowlingTeam) {
-        this.firstBowlingTeam = firstBowlingTeam;
+    public void setBowlingTeam(Team firstBowlingTeam) {
+        this.bowlingTeam = firstBowlingTeam;
     }
 
-    public Map<Team, List<ScoreCard>> getMatchScoreCard() {
+    public Map<Team, ScoreBoard> getMatchScoreCard() {
         return matchScoreCard;
     }
 
-    public void setMatchScoreCard(Map<Team, List<ScoreCard>> matchScoreCard) {
+    public void setMatchScoreCard(Map<Team, ScoreBoard> matchScoreCard) {
         this.matchScoreCard = matchScoreCard;
     }
 
     public void initializeScoreCard() {
         this.matchScoreCard = new HashMap<>();
-        this.matchScoreCard.put(firstBattingTeam, new HashMap<>());
-        this.matchScoreCard.put(firstBowlingTeam, new HashMap<>());
-        for(Player player : firstBattingTeam.getPlayers()){
-            this.matchScoreCard.get(firstBattingTeam).put(player,)
+        matchScoreCard.put(battingTeam, initializeScoreBoard(battingTeam));
+        bowlingPlayer = bowlingTeam.getPlayers().get(0);
+        matchScoreCard.put(bowlingTeam, initializeScoreBoard(bowlingTeam));
+        onStrikePlayer = battingTeam.getPlayers().get(0);
+        nonStrikePlayer = bowlingTeam.getPlayers().get(1);
+    }
+
+    private ScoreBoard initializeScoreBoard(Team team) {
+        ScoreBoard scoreBoard = new ScoreBoard();
+        ScoreCard battingScoreCard = new ScoreCard(new ArrayList<>());
+        ScoreCard bowlingScoreCard = new ScoreCard(new ArrayList<>());
+
+        for (Player player : team.getPlayers()) {
+            battingScoreCard.getScoreCardEntryList().put(player, new ScoreCardEntry(player));
+            bowlingScoreCard.getScoreCardEntryList().put(player, new ScoreCardEntry(player));
         }
+
+        return scoreBoard;
     }
 
     @Override
     public void observe(Ball ball) {
-        Ball balls = ball;
-        if (balls.isWicket()){
-            Player bowlingplayer = firstBowlingTeam.getPlayers().get(0);
-            bowlingplayer.totalWicketsTaken = bowlingplayer.totalWicketsTaken + 1;
-            Player battingPlayer = firstBattingTeam.getPlayers().get(0);
-            matchScoreCard.get(getFirstBattingTeam()).put(battingPlayer,ScoreCardEntry);
+
+        updateBowlingScoreCard(ball);
+        updateBattingScoreCard(ball);
+    }
+
+    private void updateBowlingScoreCard(Ball ball) {
+        ScoreCard bowlingScoreCard = matchScoreCard.get(bowlingTeam).BowlingScoreCard;
+        if (bowlingScoreCard.totalOversBowled == totalOverToBePlayed) {
+            changeInnings();
+        }
+
+        if (ball.isWicket()) {
+            bowlingPlayer.totalWicketsTaken = bowlingPlayer.totalWicketsTaken + 1;
+
+            bowlingScoreCard.setTotalWicketsTaken(bowlingScoreCard.totalWicketsTaken + 1);
+            if (bowlingScoreCard.totalWicketsTaken == 10) {
+                changeInnings();
+                return;
+            }
+        }
+
+    }
+
+    private void changeInnings() {
+        Team team = bowlingTeam;
+        bowlingTeam = battingTeam;
+        battingTeam = team;
+        this.InningsNo = 2;
+    }
+
+    private void updateBattingScoreCard(Ball ball) {
+        onStrikePlayer.totalRunsScored = onStrikePlayer.getTotalRunsScored() + ball.getRunsScored();
+        onStrikePlayer.totalBallsPlayed = onStrikePlayer.totalBallsPlayed + 1;
+        ScoreCard battingScoreCard = matchScoreCard.get(battingTeam).BattingScoreCard;
+        ScoreCardEntry scoreCardEntry = battingScoreCard.scoreCardEntryList.get(onStrikePlayer);
+        scoreCardEntry.totalRunsScored = scoreCardEntry.totalRunsScored + ball.getRunsScored();
+        if (ball.isFour()) {
+            scoreCardEntry.totalFours = scoreCardEntry.totalFours + 1;
+        }
+        if (ball.isSix()) {
+            scoreCardEntry.totalSixes = scoreCardEntry.totalSixes + 1;
+        }
+        if (ball.isWicket()) {
+            scoreCardEntry.isBowled = true;
+            onStrikePlayer = getNextBatsmen();
+        }
+        if (ball.getBallNo() == 6 || ball.getRunsScored() % 2 == 1) {
+            rotateStrike();
         }
     }
+
+    public Player getNextBatsmen() {
+        ScoreCard scoreCard = matchScoreCard.get(battingTeam).BattingScoreCard;
+        Player player = null;
+        for (Map.Entry entry : scoreCard.getScoreCardEntryList().entrySet()) {
+            player = (Player) entry.getKey();
+            ScoreCardEntry scoreCardEntry = (ScoreCardEntry) entry.getValue();
+            if (!scoreCardEntry.isBowled) {
+                return player;
+            }
+        }
+        return player;
+    }
+
+    public Player getNextBowler() {
+        return bowlingTeam.getPlayers().get(1);
+    }
+
+    public void rotateStrike() {
+        Player temp = onStrikePlayer;
+        onStrikePlayer = nonStrikePlayer;
+        nonStrikePlayer = temp;
+    }
 }
+
+
+

@@ -13,6 +13,7 @@ public class ScoreCardEntry {
     int totalSingles;
     int totalOversBowled;
     int totalWicketsTaken;
+    boolean isBowled;
     Player wicketTakenBy;
 
     public ScoreCardEntry(Player player) {

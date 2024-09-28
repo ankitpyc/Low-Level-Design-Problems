@@ -12,34 +12,58 @@ public class Match implements MatchSubscriber {
     Team getPlayingTeam2;
     Team tossWinner;
     MatchScoreBoard scoreBoard;
-    Commentary commentary;
-    int []ballOutcomes = {-1,0,1,2,3,4,6};
+    CommentaryService commentary;
 
-    public void playMatch(){
-        Team battingTeam = scoreBoard.getFirstBattingTeam();
-        Team bowlingTeam = scoreBoard.getFirstBowlingTeam();
-        int totalOvers = matchesType.noOfOvers;
-        Player battingPlayer = battingTeam.players.get(0);
-        Player bowlerPlayer = bowlingTeam.players.get(0);
-        for(int over = 0;over < totalOvers;over++){
-           for(int i = 0;i<6;i++){
-               Ball ball = PlayBall()
-           }
-        }
-
-
+    public MatchesType getMatchesType() {
+        return matchesType;
     }
 
-    private Ball PlayBall() {
-        Random random = new Random();
-        Ball ball = new Ball();
-        int num  = -1 + random.nextInt(7);
-        switch (num){
-            case -1:
-                ball.runsScored = 0;
-                ball.isWicket = true;
+    public void setMatchesType(MatchesType matchesType) {
+        this.matchesType = matchesType;
+    }
 
+    public Team getPlayingTeam1() {
+        return playingTeam1;
+    }
 
-        }
+    public void setPlayingTeam1(Team playingTeam1) {
+        this.playingTeam1 = playingTeam1;
+    }
 
+    public Team getGetPlayingTeam2() {
+        return getPlayingTeam2;
+    }
+
+    public void setGetPlayingTeam2(Team getPlayingTeam2) {
+        this.getPlayingTeam2 = getPlayingTeam2;
+    }
+
+    public Team getTossWinner() {
+        return tossWinner;
+    }
+
+    public void setTossWinner(Team tossWinner) {
+        this.tossWinner = tossWinner;
+    }
+
+    public MatchScoreBoard getScoreBoard() {
+        return scoreBoard;
+    }
+
+    public void setScoreBoard(MatchScoreBoard scoreBoard) {
+        this.scoreBoard = scoreBoard;
+    }
+
+    public CommentaryService getCommentary() {
+        return commentary;
+    }
+
+    public void setCommentary(CommentaryService commentary) {
+        this.commentary = commentary;
+    }
+
+    @Override
+    public void onBallDeliveryChange(Ball ball) {
+
+    }
 }

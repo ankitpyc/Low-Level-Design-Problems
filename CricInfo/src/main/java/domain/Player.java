@@ -5,6 +5,7 @@ public class Player extends Stats {
     String PlayingTeam;
 
     public Player(String playerName, String playingTeam) {
+        super(0,0,0,0,0,0.0);
         this.playerName = playerName;
         PlayingTeam = playingTeam;
     }

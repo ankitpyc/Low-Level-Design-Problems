@@ -1,18 +1,39 @@
 package domain;
 
 public class Ball {
+    int ballNo;
     boolean isWicket;
     int runsScored;
-    int isFour;
-    int isSix;
+    boolean isFour;
+    boolean isSix;
     WicketType wicketType;
 
-    public Ball(boolean isWicket, int runsScored, int isFour, int isSix, WicketType wicketType) {
-        this.isWicket = isWicket;
-        this.runsScored = runsScored;
-        this.isFour = isFour;
-        this.isSix = isSix;
-        this.wicketType = wicketType;
+    public Ball(int index) {
+        this.ballNo = index;
+    }
+
+    public int getBallNo() {
+        return ballNo;
+    }
+
+    public void setBallNo(int ballNo) {
+        this.ballNo = ballNo;
+    }
+
+    public boolean isFour() {
+        return isFour;
+    }
+
+    public void setFour(boolean four) {
+        isFour = four;
+    }
+
+    public boolean isSix() {
+        return isSix;
+    }
+
+    public void setSix(boolean six) {
+        isSix = six;
     }
 
     public boolean isWicket() {
@@ -31,19 +52,19 @@ public class Ball {
         this.runsScored = runsScored;
     }
 
-    public int getIsFour() {
+    public boolean getIsFour() {
         return isFour;
     }
 
-    public void setIsFour(int isFour) {
+    public void setIsFour(boolean isFour) {
         this.isFour = isFour;
     }
 
-    public int getIsSix() {
+    public boolean getIsSix() {
         return isSix;
     }
 
-    public void setIsSix(int isSix) {
+    public void setIsSix(boolean isSix) {
         this.isSix = isSix;
     }
 
