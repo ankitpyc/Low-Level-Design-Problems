@@ -5,7 +5,8 @@ import java.util.Map;
 
 public class ExpenseEvent {
     ExpenseOperation expenseOperation;
-    Map<User,Double> splitMap;
+    Double amount;
+    User user;
 
     public ExpenseEvent(ExpenseOperation expenseOperation) {
         this.expenseOperation = expenseOperation;
@@ -19,11 +20,19 @@ public class ExpenseEvent {
         this.expenseOperation = expenseOperation;
     }
 
-    public Map<User, Double> getSplitMap() {
-        return splitMap;
+    public Double getAmount() {
+        return amount;
     }
 
-    public void setSplitMap(Map<User, Double> splitMap) {
-        this.splitMap = splitMap;
+    public User getUser() {
+        return user;
+    }
+
+    public void setUser(User user) {
+        this.user = user;
+    }
+
+    public void setAmount(Double amount) {
+        this.amount = amount;
     }
 }

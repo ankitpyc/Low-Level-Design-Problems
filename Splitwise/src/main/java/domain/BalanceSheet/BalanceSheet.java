@@ -1,18 +1,21 @@
 package domain.BalanceSheet;
 
 import domain.*;
+import domain.algo.MinimizeTransactions;
 
 import java.util.Map;
 
-public class BalanceSheet  implements ExpenseObserver {
-    Map<User,Double> balanceSheet;
+public class BalanceSheet implements ExpenseObserver {
+    Map<User, Double> balanceSheet;
     Double totalCreditAmount;
     Double totalDebitAmount;
+    MinimizeTransactions transactionsService;
 
     public BalanceSheet(Map<User, Double> balanceSheet, Double totalCreditAmount, Double totalDebitAmount) {
         this.balanceSheet = balanceSheet;
         this.totalCreditAmount = totalCreditAmount;
         this.totalDebitAmount = totalDebitAmount;
+        this.transactionsService = new MinimizeTransactions();
     }
 
     public Map<User, Double> getBalanceSheet() {
@@ -41,8 +44,11 @@ public class BalanceSheet  implements ExpenseObserver {
 
     @Override
     public void observe(ExpenseEvent event) {
-        if (event.getExpenseOperation().equals(ExpenseOperation.DEBIT)){
-//            balanceSheet.get()
+        if (event.getExpenseOperation().equals(ExpenseOperation.CREDIT)) {
+            balanceSheet.put(event.getUser(), event.getAmount());
+        } else {
+            balanceSheet.put(event.getUser(), -1 * event.getAmount());
         }
+        balanceSheet = transactionsService.minimizeTxn(balanceSheet);
     }
 }
