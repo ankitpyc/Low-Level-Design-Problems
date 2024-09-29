@@ -18,6 +18,7 @@
       <directory url="file://$PROJECT_DIR$/Ecommerce/src/main/resources/archetype-resources" includeSubdirectories="true" />
       <directory url="file://$PROJECT_DIR$/MovieTicketBooking/src/main/resources/archetype-resources" includeSubdirectories="true" />
       <directory url="file://$PROJECT_DIR$/StockBrokerageSystem/src/main/resources/archetype-resources" includeSubdirectories="true" />
+      <directory url="file://$PROJECT_DIR$/RideSharingService/src/main/resources/archetype-resources" includeSubdirectories="true" />
     </excludeFromCompile>
     <annotationProcessing>
       <profile default="true" name="Default" enabled="true" />
@@ -34,6 +35,7 @@
         <module name="UniversityManagementSystem" />
         <module name="SnakeLadder" />
         <module name="Ecommerce" />
+        <module name="RideSharingService" />
         <module name="Jira" />
         <module name="LinkedIn" />
         <module name="ATMMachine" />
