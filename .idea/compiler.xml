@@ -15,6 +15,9 @@
       <directory url="file://$PROJECT_DIR$/Splitwise/src/main/resources/archetype-resources" includeSubdirectories="true" />
       <directory url="file://$PROJECT_DIR$/ParkingLot/src/main/resources/archetype-resources" includeSubdirectories="true" />
       <directory url="file://$PROJECT_DIR$/AirlineReservationSystem/src/main/resources/archetype-resources" includeSubdirectories="true" />
+      <directory url="file://$PROJECT_DIR$/Ecommerce/src/main/resources/archetype-resources" includeSubdirectories="true" />
+      <directory url="file://$PROJECT_DIR$/MovieTicketBooking/src/main/resources/archetype-resources" includeSubdirectories="true" />
+      <directory url="file://$PROJECT_DIR$/StockBrokerageSystem/src/main/resources/archetype-resources" includeSubdirectories="true" />
     </excludeFromCompile>
     <annotationProcessing>
       <profile default="true" name="Default" enabled="true" />
@@ -23,18 +26,21 @@
         <sourceTestOutputDir name="target/generated-test-sources/test-annotations" />
         <outputRelativeToContentRoot value="true" />
         <module name="CricInfo" />
+        <module name="MovieTicketBooking" />
         <module name="VendingMachine" />
         <module name="GoogleCalendar" />
         <module name="Splitwise" />
         <module name="HotelManagementSystem" />
         <module name="UniversityManagementSystem" />
         <module name="SnakeLadder" />
+        <module name="Ecommerce" />
         <module name="Jira" />
         <module name="LinkedIn" />
         <module name="ATMMachine" />
         <module name="ParkingLot" />
         <module name="TicTacToe" />
         <module name="AirlineReservationSystem" />
+        <module name="StockBrokerageSystem" />
         <module name="ConcurrentHashMap" />
       </profile>
     </annotationProcessing>
