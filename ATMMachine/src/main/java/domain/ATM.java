@@ -1,5 +1,6 @@
 package domain;
 
+import domain.Command.DispenseCashCommand;
 import domain.DispenseStrategy.DispenseStrategy;
 import domain.enums.Denominations;
 import lombok.AllArgsConstructor;
@@ -15,6 +16,7 @@ public class ATM {
 
     Map<Denominations, Integer> denomMap;
     DispenseStrategy dispenseStrategy;
+    User user;
 
     public boolean depositMoney(int totalAmount, Map<Denominations, Integer> denomMap) {
         for (Map.Entry entry : denomMap.entrySet()) {
@@ -25,7 +27,8 @@ public class ATM {
         return true;
     }
 
-    public boolean dispenseMoney(int totalAmount) {
+    public void dispenseMoney(int totalAmount) {
+        DispenseCashCommand dispenseCashCommand = new DispenseCashCommand(this user, totalAmount);
 
     }
 

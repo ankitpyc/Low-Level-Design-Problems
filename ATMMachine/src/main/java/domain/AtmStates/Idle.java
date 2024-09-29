@@ -17,18 +17,18 @@ public class Idle extends ATMState {
     }
 
     @Override
-    protected void WithdrawCash(Integer amounr) {
+    public void WithdrawCash(Integer amounr) {
         System.out.println("Invalid Operation - Enter Card First and validate");
     }
 
     @Override
-    protected void AuthenticateUser() {
+    public void AuthenticateUser() {
         System.out.println("Validating User .. ");
         command.execute(user);
     }
 
     @Override
-    protected void EnterAmount(Integer amount) {
+    public void EnterAmount(Integer amount) {
         System.out.println("Invalid Operation - Enter Card First and validate");
 
     }
