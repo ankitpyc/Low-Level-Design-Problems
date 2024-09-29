@@ -26,7 +26,7 @@ public class Game {
                 i = i % 6;
                 Player player = playerList.get(i);
                 Point point = board.move(player);
-                if (getIsGameOver(point)) {
+                if (isGameOver(point)) {
                     winner = player;
                     break;
                 }
