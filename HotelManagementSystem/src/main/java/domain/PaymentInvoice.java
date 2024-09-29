@@ -16,5 +16,4 @@ public class PaymentInvoice {
     Date paymentDoneAt;
     Guest guest;
     PaymentStatus paymentStatus;
-
 }
