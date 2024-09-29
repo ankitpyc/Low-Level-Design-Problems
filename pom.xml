@@ -13,6 +13,8 @@
         <module>HotelManagementSystem</module>
         <module>SnakeLadder</module>
         <module>ATMMachine</module>
+        <module>ParkingLot</module>
+        <module>AirlineReservationSystem</module>
     </modules>
     <dependencies>
         <dependency>

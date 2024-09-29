@@ -21,17 +21,18 @@
         <sourceTestOutputDir name="target/generated-test-sources/test-annotations" />
         <outputRelativeToContentRoot value="true" />
         <module name="CricInfo" />
-        <module name="LinkedIn" />
         <module name="VendingMachine" />
-        <module name="ATMMachine" />
         <module name="GoogleCalendar" />
         <module name="Splitwise" />
         <module name="HotelManagementSystem" />
-        <module name="TicTacToe" />
         <module name="UniversityManagementSystem" />
         <module name="SnakeLadder" />
-        <module name="ConcurrentHashMap" />
         <module name="Jira" />
+        <module name="LinkedIn" />
+        <module name="ATMMachine" />
+        <module name="ParkingLot" />
+        <module name="TicTacToe" />
+        <module name="ConcurrentHashMap" />
       </profile>
     </annotationProcessing>
   </component>
