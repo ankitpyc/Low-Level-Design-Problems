@@ -7,6 +7,12 @@
         <option value="$PROJECT_DIR$/pom.xml" />
         <option value="$PROJECT_DIR$/CricInfo/pom.xml" />
         <option value="$PROJECT_DIR$/TicTacToe/pom.xml" />
+        <option value="$PROJECT_DIR$/Jira/pom.xml" />
+        <option value="$PROJECT_DIR$/UniversityManagementSystem/pom.xml" />
+        <option value="$PROJECT_DIR$/GoogleCalendar/pom.xml" />
+        <option value="$PROJECT_DIR$/VendingMachine/pom.xml" />
+        <option value="$PROJECT_DIR$/ConcurrentHashMap/pom.xml" />
+        <option value="$PROJECT_DIR$/Splitwise/pom.xml" />
       </list>
     </option>
   </component>

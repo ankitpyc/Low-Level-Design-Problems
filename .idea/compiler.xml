@@ -7,6 +7,12 @@
       <directory url="file://$PROJECT_DIR$/HotelManagementSystem/src/main/resources/archetype-resources" includeSubdirectories="true" />
       <directory url="file://$PROJECT_DIR$/SnakeLadder/src/main/resources/archetype-resources" includeSubdirectories="true" />
       <directory url="file://$PROJECT_DIR$/ATMMachine/src/main/resources/archetype-resources" includeSubdirectories="true" />
+      <directory url="file://$PROJECT_DIR$/Jira/src/main/resources/archetype-resources" includeSubdirectories="true" />
+      <directory url="file://$PROJECT_DIR$/UniversityManagementSystem/src/main/resources/archetype-resources" includeSubdirectories="true" />
+      <directory url="file://$PROJECT_DIR$/GoogleCalendar/src/main/resources/archetype-resources" includeSubdirectories="true" />
+      <directory url="file://$PROJECT_DIR$/VendingMachine/src/main/resources/archetype-resources" includeSubdirectories="true" />
+      <directory url="file://$PROJECT_DIR$/ConcurrentHashMap/src/main/resources/archetype-resources" includeSubdirectories="true" />
+      <directory url="file://$PROJECT_DIR$/Splitwise/src/main/resources/archetype-resources" includeSubdirectories="true" />
     </excludeFromCompile>
     <annotationProcessing>
       <profile name="Maven default annotation processors profile" enabled="true">
@@ -15,10 +21,16 @@
         <outputRelativeToContentRoot value="true" />
         <module name="CricInfo" />
         <module name="LinkedIn" />
-        <module name="SnakeLadder" />
+        <module name="VendingMachine" />
         <module name="ATMMachine" />
+        <module name="GoogleCalendar" />
+        <module name="Splitwise" />
         <module name="HotelManagementSystem" />
         <module name="TicTacToe" />
+        <module name="UniversityManagementSystem" />
+        <module name="SnakeLadder" />
+        <module name="ConcurrentHashMap" />
+        <module name="Jira" />
       </profile>
     </annotationProcessing>
   </component>
