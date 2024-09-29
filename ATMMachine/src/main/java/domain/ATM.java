@@ -28,7 +28,7 @@ public class ATM {
     }
 
     public void dispenseMoney(int totalAmount) {
-        DispenseCashCommand dispenseCashCommand = new DispenseCashCommand(this user, totalAmount);
+        DispenseCashCommand dispenseCashCommand = new DispenseCashCommand(this ,user, totalAmount);
 
     }
 
