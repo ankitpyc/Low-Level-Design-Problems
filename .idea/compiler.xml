@@ -19,6 +19,8 @@
       <directory url="file://$PROJECT_DIR$/MovieTicketBooking/src/main/resources/archetype-resources" includeSubdirectories="true" />
       <directory url="file://$PROJECT_DIR$/StockBrokerageSystem/src/main/resources/archetype-resources" includeSubdirectories="true" />
       <directory url="file://$PROJECT_DIR$/RideSharingService/src/main/resources/archetype-resources" includeSubdirectories="true" />
+      <directory url="file://$PROJECT_DIR$/HospitalManagementSystem/src/main/resources/archetype-resources" includeSubdirectories="true" />
+      <directory url="file://$PROJECT_DIR$/ThreadPool/src/main/resources/archetype-resources" includeSubdirectories="true" />
     </excludeFromCompile>
     <annotationProcessing>
       <profile default="true" name="Default" enabled="true" />
@@ -33,6 +35,7 @@
         <module name="Splitwise" />
         <module name="HotelManagementSystem" />
         <module name="UniversityManagementSystem" />
+        <module name="ThreadPool" />
         <module name="SnakeLadder" />
         <module name="Ecommerce" />
         <module name="RideSharingService" />
@@ -40,11 +43,15 @@
         <module name="LinkedIn" />
         <module name="ATMMachine" />
         <module name="ParkingLot" />
+        <module name="HospitalManagementSystem" />
         <module name="TicTacToe" />
         <module name="AirlineReservationSystem" />
         <module name="StockBrokerageSystem" />
         <module name="ConcurrentHashMap" />
       </profile>
     </annotationProcessing>
+    <bytecodeTargetLevel>
+      <module name="HospitalManagementSystem-backend" target="1.8" />
+    </bytecodeTargetLevel>
   </component>
 </project>

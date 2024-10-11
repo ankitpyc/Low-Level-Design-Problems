@@ -17,6 +17,9 @@
         <module>AirlineReservationSystem</module>
         <module>MovieTicketBooking</module>
         <module>StockBrokerageSystem</module>
+        <module>HospitalManagementSystem</module>
+        <module>HospitalManagementSystem</module>
+        <module>ThreadPool</module>
     </modules>
     <dependencies>
         <dependency>
