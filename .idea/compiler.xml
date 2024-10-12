@@ -21,6 +21,8 @@
       <directory url="file://$PROJECT_DIR$/RideSharingService/src/main/resources/archetype-resources" includeSubdirectories="true" />
       <directory url="file://$PROJECT_DIR$/HospitalManagementSystem/src/main/resources/archetype-resources" includeSubdirectories="true" />
       <directory url="file://$PROJECT_DIR$/ThreadPool/src/main/resources/archetype-resources" includeSubdirectories="true" />
+      <directory url="file://$PROJECT_DIR$/RateLimiter/src/main/resources/archetype-resources" includeSubdirectories="true" />
+      <directory url="file://$PROJECT_DIR$/ZoomCar/src/main/resources/archetype-resources" includeSubdirectories="true" />
     </excludeFromCompile>
     <annotationProcessing>
       <profile default="true" name="Default" enabled="true" />
@@ -36,10 +38,12 @@
         <module name="HotelManagementSystem" />
         <module name="UniversityManagementSystem" />
         <module name="ThreadPool" />
+        <module name="ZoomCar" />
         <module name="SnakeLadder" />
         <module name="Ecommerce" />
         <module name="RideSharingService" />
         <module name="Jira" />
+        <module name="RateLimiter" />
         <module name="LinkedIn" />
         <module name="ATMMachine" />
         <module name="ParkingLot" />

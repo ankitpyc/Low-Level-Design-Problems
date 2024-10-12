@@ -25,6 +25,8 @@
     <file url="file://$PROJECT_DIR$/MovieTicketBooking/src/main/resources" charset="UTF-8" />
     <file url="file://$PROJECT_DIR$/ParkingLot/src/main/java" charset="UTF-8" />
     <file url="file://$PROJECT_DIR$/ParkingLot/src/main/resources" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/RateLimiter/src/main/java" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/RateLimiter/src/main/resources" charset="UTF-8" />
     <file url="file://$PROJECT_DIR$/RideSharingService/src/main/java" charset="UTF-8" />
     <file url="file://$PROJECT_DIR$/RideSharingService/src/main/resources" charset="UTF-8" />
     <file url="file://$PROJECT_DIR$/SnakeLadder/src/main/java" charset="UTF-8" />
@@ -41,6 +43,8 @@
     <file url="file://$PROJECT_DIR$/UniversityManagementSystem/src/main/resources" charset="UTF-8" />
     <file url="file://$PROJECT_DIR$/VendingMachine/src/main/java" charset="UTF-8" />
     <file url="file://$PROJECT_DIR$/VendingMachine/src/main/resources" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/ZoomCar/src/main/java" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/ZoomCar/src/main/resources" charset="UTF-8" />
     <file url="file://$PROJECT_DIR$/src/main/java" charset="UTF-8" />
     <file url="file://$PROJECT_DIR$/src/main/resources" charset="UTF-8" />
   </component>

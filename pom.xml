@@ -20,6 +20,8 @@
         <module>HospitalManagementSystem</module>
         <module>HospitalManagementSystem</module>
         <module>ThreadPool</module>
+        <module>RateLimiter</module>
+        <module>ZoomCar</module>
     </modules>
     <dependencies>
         <dependency>
